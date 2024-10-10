@@ -3,14 +3,24 @@ export const add = (numbers: string) => {
         return 0;
     }
     let digits: number[] = [];
+    let delimiter: string | RegExp = /[\s,]+/;
+    
+    // Check if a custom delimiter is provided
+    if (numbers.startsWith("//")) {
+        delimiter = numbers[2];
+    }
+    
+    // Split the numbers by the delimiter provided
+    digits = numbers.split(delimiter).map(Number);        
 
-    if (!numbers.startsWith("//")) {
-        // Split the numbers by comma or new line
-        digits = numbers.split(/[\s,]+/).map(Number);
-    } else {
-        // Split the numbers by the delimiter provided
-        const delimiter = numbers[2];
-        digits = numbers.split(delimiter).slice(1).map(Number);
+    // Filter out any empty strings
+    digits = digits.filter(
+        (digit) => digit !== null && digit !== undefined && !isNaN(digit)
+    );
+
+    // return 0 if no digits are provided
+    if (digits.length === 0) {
+        return 0;
     }
 
     // Check for negative numbers

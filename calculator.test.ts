@@ -24,4 +24,10 @@ describe("add", () => {
     it("should throw an error when a negative number is provided", () => {
         expect(() => add("2,-3,-5")).toThrow("Negatives not allowed: -3,-5");
     });
+
+    it("should filter out non-numeric values", () => {
+        expect(add("2,3,5,abc")).toBe(10);
+        expect(add("2,3,5,")).toBe(10);
+        expect(add(",")).toBe(0);
+    });
 });

@@ -40,32 +40,39 @@ npm run test:watch
 ```
 
 ## Built With
-- [Node.js](https://nodejs.org/) - The runtime server environment
-- [npm](https://www.npmjs.com/) - Dependency Management
-- [TypeScript](https://www.typescriptlang.org/) - The scripting language used
-- [Jest](https://jestjs.io/) - The testing framework used
+
+-   [Node.js](https://nodejs.org/) - The runtime server environment
+-   [npm](https://www.npmjs.com/) - Dependency Management
+-   [TypeScript](https://www.typescriptlang.org/) - The scripting language used
+-   [Jest](https://jestjs.io/) - The testing framework used
 
 ## Version History
 
 ### 1.0.0
 
-- Initial release.
-- Supports sum of two numbers using the [`add`](./calculator.ts) function.
+-   Initial release.
+-   Supports sum of two numbers using the [`add`](./calculator.ts) function.
 
 ### 1.0.1
 
-- Add support for handling multiple numbers in the add function
+-   Add support for handling multiple numbers in the add function
 
 ### 1.0.2
 
-- Fix handling of whitespaces between numbers in add function
+-   Fix handling of whitespaces between numbers in add function
 
 ### 1.1.0
 
-- Add support for different delimiters in add function
+-   Add support for different delimiters in add function
 
 ### 1.1.1
-- Refactor tests and add negative number handling
+
+-   Refactor tests and add negative number handling
+
+### 1.1.2
+
+-   Add support for filtering out non-numeric values in the add function
 
 ## Author
-- **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)
+
+-   **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)
