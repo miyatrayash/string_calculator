@@ -8,4 +8,8 @@ describe('add', () => {
     it('should return 0 when no numbers are provided', () => {
         expect(add('')).toBe(0);
     });
+
+    it('should handle multiple numbers', () => {
+        expect(add('2,3,5')).toBe(10);
+    });
 });

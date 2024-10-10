@@ -3,7 +3,7 @@ export const add = (numbers: string) => {
         return 0;
     }
 
-    const [a, b] = numbers.split(',').map(Number);
+    const digits = numbers.split(',').map(Number);
 
-    return a + b;
+    return digits.reduce((acc, curr) => acc + curr);
 }

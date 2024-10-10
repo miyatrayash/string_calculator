@@ -55,3 +55,7 @@ npm run test:watch
 
 - Initial release.
 - Supports sum of two numbers using the [`add`](./calculator.ts) function.
+
+### 1.0.1
+
+- Add support for handling multiple numbers in the add function
