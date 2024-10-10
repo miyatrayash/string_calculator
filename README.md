@@ -60,5 +60,9 @@ npm run test:watch
 
 - Fix handling of whitespaces between numbers in add function
 
-## Authors
+### 1.1.0
+
+- Add support for different delimiters in add function
+
+## Author
 - **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)

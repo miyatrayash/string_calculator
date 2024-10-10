@@ -16,4 +16,8 @@ describe('add', () => {
     it('should handle new lines between numbers', () => {
         expect(add('2\n3,5')).toBe(10);
     });
+
+    it('should handle different delimiters', () => {
+        expect(add('//;\n1;2;3')).toBe(6);
+    });
 });

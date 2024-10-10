@@ -3,7 +3,13 @@ export const add = (numbers: string) => {
         return 0;
     }
 
-    const digits = numbers.split(/[\s,]+/).map(Number);
+    if (!numbers.startsWith("//")) {
+        const digits = numbers.split(/[\s,]+/).map(Number);
+        return digits.reduce((acc, curr) => acc + curr);
+    }
+
+    const delimiter = numbers[2];
+    const digits = numbers.split(delimiter).slice(1).map(Number);
 
     return digits.reduce((acc, curr) => acc + curr);
 };
