@@ -73,6 +73,11 @@ npm run test:watch
 
 -   Add support for filtering out non-numeric values in the add function
 
+### 1.2.0
+
+-   Add test case to ignore numbers greater than 1000 in add function
+-   Add support for custom delimiters of any length
+
 ## Author
 
 -   **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)

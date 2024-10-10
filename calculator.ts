@@ -7,7 +7,20 @@ export const add = (numbers: string) => {
 
     // Check if a custom delimiter is provided
     if (numbers.startsWith("//")) {
-        delimiter = numbers[2];
+        const match = numbers.match(/\/\/(.+)*\n/);
+        if (!match || match.length < 2) {
+            throw new Error("Invalid delimiter format");
+        }
+
+        // Extract the delimiter and the numbers
+        delimiter = match[1];
+        numbers = numbers.substring(match[0].length);
+
+        // Check if the delimiter is a single character
+        if (delimiter.startsWith("[") && delimiter.endsWith("]")) {
+            // Custom delimiter of any length
+            delimiter = delimiter.substring(1, delimiter.length - 1);
+        }
     }
 
     // Split the numbers by the delimiter provided

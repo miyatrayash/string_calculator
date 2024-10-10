@@ -34,4 +34,8 @@ describe("add", () => {
     it("should ignore numbers greater than 1000", () => {
         expect(add("2,3,5,1001")).toBe(10);
     });
+
+    it("should handle custom delimiters of any length", () => {
+        expect(add("//[***]\n1***2***3")).toBe(6);
+    });
 });
