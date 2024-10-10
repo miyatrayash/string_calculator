@@ -64,5 +64,8 @@ npm run test:watch
 
 - Add support for different delimiters in add function
 
+### 1.1.1
+- Refactor tests and add negative number handling
+
 ## Author
 - **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)
