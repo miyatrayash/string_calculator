@@ -45,10 +45,6 @@ npm run test:watch
 - [TypeScript](https://www.typescriptlang.org/) - The scripting language used
 - [Jest](https://jestjs.io/) - The testing framework used
 
-## Authors
-- **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)
-
-
 ## Version History
 
 ### 1.0.0
@@ -59,3 +55,10 @@ npm run test:watch
 ### 1.0.1
 
 - Add support for handling multiple numbers in the add function
+
+### 1.0.2
+
+- Fix handling of whitespaces between numbers in add function
+
+## Authors
+- **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)

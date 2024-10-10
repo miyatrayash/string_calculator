@@ -12,4 +12,8 @@ describe('add', () => {
     it('should handle multiple numbers', () => {
         expect(add('2,3,5')).toBe(10);
     });
+
+    it('should handle new lines between numbers', () => {
+        expect(add('2\n3,5')).toBe(10);
+    });
 });
