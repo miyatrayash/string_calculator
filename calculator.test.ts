@@ -37,5 +37,15 @@ describe("add", () => {
 
     it("should handle custom delimiters of any length", () => {
         expect(add("//[***]\n1***2***3")).toBe(6);
+        expect(add("//[())]\n1())2())3())4")).toBe(10);
+        expect(add("//[[][]\n1[][2[][3[][4")).toBe(10);
+    });
+
+    it("should handle multiple custom delimiters", () => {
+        expect(add("//[.][*]\n1.2*3")).toBe(6);
+    });
+
+    it("should handle multiple custom delimiters of any length", () => {
+        expect(add("//[***][%%]\n1***2%%3")).toBe(6);
     });
 });

@@ -78,6 +78,10 @@ npm run test:watch
 -   Add test case to ignore numbers greater than 1000 in add function
 -   Add support for custom delimiters of any length
 
+### 2.0
+
+-   Add support for multiple custom delimiters
+
 ## Author
 
 -   **Yash Miyatra** - Initial work - [miyatrayash](https://github.com/miyatrayash)

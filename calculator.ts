@@ -16,10 +16,16 @@ export const add = (numbers: string) => {
         delimiter = match[1];
         numbers = numbers.substring(match[0].length);
 
-        // Check if the delimiter is a single character
-        if (delimiter.startsWith("[") && delimiter.endsWith("]")) {
-            // Custom delimiter of any length
+
+        // Extract multiple delimiters
+        if (delimiter.startsWith("[")) {
             delimiter = delimiter.substring(1, delimiter.length - 1);
+            if (delimiter.includes("][")) {
+                delimiter = delimiter.split("][").join("|");
+                // Escape special characters in the delimiter
+                delimiter = delimiter.replace(/[.*+?^$\[\]\\]/g, '\\$&');                
+                delimiter = new RegExp(delimiter);
+            }
         }
     }
 
