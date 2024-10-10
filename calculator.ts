@@ -4,14 +4,14 @@ export const add = (numbers: string) => {
     }
     let digits: number[] = [];
     let delimiter: string | RegExp = /[\s,]+/;
-    
+
     // Check if a custom delimiter is provided
     if (numbers.startsWith("//")) {
         delimiter = numbers[2];
     }
-    
+
     // Split the numbers by the delimiter provided
-    digits = numbers.split(delimiter).map(Number);        
+    digits = numbers.split(delimiter).map(Number);
 
     // Filter out any empty strings
     digits = digits.filter(
@@ -23,8 +23,18 @@ export const add = (numbers: string) => {
         return 0;
     }
 
-    // Check for negative numbers
-    const negativeDigits = digits.filter((digit) => digit < 0);
+    const negativeDigits: number[] = [];
+
+    // Filter out numbers greater than 1000
+    digits = digits.filter((digit) => {
+        // Check for negative numbers
+        if (digit < 0) {
+            negativeDigits.push(digit);
+        }
+
+        return digit <= 1000;
+    });
+
     if (negativeDigits.length > 0) {
         throw new Error("Negatives not allowed: " + negativeDigits.join(","));
     }

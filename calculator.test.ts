@@ -30,4 +30,8 @@ describe("add", () => {
         expect(add("2,3,5,")).toBe(10);
         expect(add(",")).toBe(0);
     });
+
+    it("should ignore numbers greater than 1000", () => {
+        expect(add("2,3,5,1001")).toBe(10);
+    });
 });
